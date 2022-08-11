@@ -1,0 +1,6 @@
+FROM tomcat:9.0.64-jdk8-temurin-focal
+LABEL author=khaja
+LABEL why=forfun
+RUN curl https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/gameoflife.war --output /usr/local/tomcat/webapps/gameoflife.war
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
